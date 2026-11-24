@@ -27,6 +27,7 @@
   --ink: #142443;
   --cobalt: #293fbc;
   --yellow: #ffe788;
+  --soft-blue: #d9eeff;
   --ice: #f5f8fc;
   --cream: #fffcf5;
   --line: #d5d9da;
@@ -177,9 +178,6 @@ h1, h2, h3, .programme-title, .news-title {
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px clamp(14px, 2.65vw, 36px); margin-block-start: 33px; }
 .hero-tour { inline-size: min(100%, 267px); gap: 7px; }
 .hero-more { color: #fff; font-size: 15px; white-space: nowrap; }
-.hero-more-mobile { display: none; }
-.hero-secondary { margin-block-start: 24px; }
-.hero-languages { display: flex; flex-wrap: wrap; gap: 6px; }
 .hero-media { position: relative; }
 .hero-portrait {
   aspect-ratio: 538 / 350;
@@ -217,22 +215,46 @@ h1, h2, h3, .programme-title, .news-title {
 .advantages { padding-block: 36px 29px; }
 .advantages-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
 .advantages h2 { max-inline-size: 700px; font-size: 42px; }
-.language-tabs { display: flex; flex-wrap: wrap; gap: 8px; flex-shrink: 0; }
-.hero-languages button, .language-tabs button {
-  display: inline-flex;
+.language-picker { position: relative; flex: none; }
+.language-trigger { list-style: none; gap: 7px; cursor: pointer; background: var(--ice); }
+.language-trigger::-webkit-details-marker { display: none; }
+.language-trigger::after {
+  content: "";
+  inline-size: 7px;
+  block-size: 7px;
+  margin-inline-start: 3px;
+  border: solid currentColor;
+  border-width: 0 1.5px 1.5px 0;
+  transform: translateY(-2px) rotate(45deg);
+}
+.language-picker[open] .language-trigger::after { transform: translateY(2px) rotate(225deg); }
+.language-options {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3px;
+  position: absolute;
+  z-index: 3;
+  inset: calc(100% + 6px) 0 auto auto;
+  inline-size: max(100%, 148px);
+  padding: 6px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--ice);
+  box-shadow: 0 6px 20px #14244324;
+}
+.language-options button {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 7px;
-  min-block-size: 33px;
-  padding-inline: 14px;
-  border-radius: 20px;
-  color: var(--ink);
-  background: #fff;
-  font-size: 11px;
+  gap: 8px;
+  width: 100%;
+  min-height: 38px;
+  padding-inline: 12px;
+  border-radius: 11px;
+  font-size: 13px;
   font-weight: 700;
 }
-.hero-languages button:hover, .language-tabs button:hover { box-shadow: inset 0 0 0 1px var(--cobalt); }
-.language-tabs button[aria-selected="true"] { color: #fff; background: var(--ink); }
+.language-options button:hover { background: white; }
+.language-options button[aria-pressed="true"] { color: white; background: var(--ink); }
 .benefit-list { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-block: 25px 24px; }
 .benefit {
   display: flex;
@@ -253,7 +275,7 @@ h1, h2, h3, .programme-title, .news-title {
   block-size: 48px;
   padding: 8px;
   border-radius: 14px;
-  background: #d9eeff;
+  background: var(--soft-blue);
 }
 .benefit span { max-inline-size: 390px; }
 .benefit-list:lang(zh-Hans) .benefit, .benefit-list:lang(th) .benefit { font-family: inherit; line-height: 1.32; letter-spacing: normal; }
@@ -332,6 +354,19 @@ h1, h2, h3, .programme-title, .news-title {
   padding: 2px 28px 28px;
 }
 .details-body h2 { font: 700 18px/1.3 var(--body); letter-spacing: normal; }
+.details-body .programme-age-heading { font-size: 20px; }
+@media (forced-colors: none) {
+  .details-body:has(> .programme-age-heading) {
+    scrollbar-width: thin;
+    scrollbar-color: var(--soft-blue) transparent;
+  }
+  @supports selector(::-webkit-scrollbar) {
+    .details-body:has(> .programme-age-heading) { scrollbar-width: auto; scrollbar-color: auto; }
+    .details-body:has(> .programme-age-heading)::-webkit-scrollbar { width: 8px; }
+    .details-body:has(> .programme-age-heading)::-webkit-scrollbar-thumb { background: var(--soft-blue); border-radius: 8px; }
+    .details-body:has(> .programme-age-heading)::-webkit-scrollbar-button { display: none; width: 0; height: 0; }
+  }
+}
 .details-body h2:lang(zh-Hans), .details-body h2:lang(th) { font-family: inherit; }
 .details-body p { overflow-wrap: anywhere; }
 .details-body h3 { font: 700 16px/1.32 var(--body); letter-spacing: normal; }
@@ -384,14 +419,18 @@ h1, h2, h3, .programme-title, .news-title {
   .benefit { font-size: 20px; }
 }
 
-@media (max-width: 799px) {
-  :root { --gutter: 20px; }
-  .site-header { inline-size: calc(100% - 32px); min-block-size: 67px; }
+@media (max-width: 1000px) {
+  .site-header { inline-size: calc(100% - 32px); min-block-size: 67px; gap: 12px; }
   .school-crest { inline-size: 46px; }
   .school-name { font-size: .55rem; }
   .school-name-primary { font-size: 1.08rem; }
   .desktop-nav, .header-contact { display: none; }
-  .mobile-menu { display: grid; place-items: center; inline-size: 44px; block-size: 44px; border-radius: 16px; background: #f4f4f0; }
+  .mobile-menu { flex: none; display: grid; place-items: center; inline-size: 44px; block-size: 44px; border-radius: 16px; background: #f4f4f0; }
+}
+
+@media (max-width: 799px) {
+  :root { --gutter: 20px; }
+
 
   .section { padding-block: 26px; }
   .section h2 { font-size: 32px; }
@@ -408,7 +447,6 @@ h1, h2, h3, .programme-title, .news-title {
   .benefit { gap: 8px; min-block-size: 40px; font: 700 17px/1.08 var(--body); letter-spacing: normal; }
   .benefit img { inline-size: 40px; block-size: 40px; padding: 6px; border-radius: 12px; }
   .benefit span { max-inline-size: none; }
-  .language-tabs button { gap: 7px; }
 
   .news { padding-block-end: 24px; }
   .news-list { grid-template-columns: 1fr; gap: 15px; margin-block: 18px 16px; }
@@ -441,13 +479,9 @@ h1, h2, h3, .programme-title, .news-title {
   .hero { min-block-size: 0; gap: clamp(18px, 3vw, 32px); padding: clamp(20px, 3vw, 32px); border-radius: 32px; }
   .hero h1 { font-size: clamp(2.625rem, 6vw, 4rem); }
   .hero-copy { margin-block-start: 14px; font-size: 16px; font-weight: 400; }
-  .hero-actions { margin-block-start: 20px; }
+  .hero-actions { display: grid; justify-items: start; gap: 8px; margin-block-start: 20px; }
+  .hero-more { font-size: 11px; }
   .hero-tour { inline-size: min(100%, 260px); font-size: 12px; }
-  .hero-more-desktop { display: none; }
-  .hero-secondary { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 18px; margin-block-start: 8px; }
-  .hero-more-mobile { display: inline-flex; font-size: 11px; font-weight: 700; }
-  .hero-languages { gap: 4px; }
-  .hero-languages button { gap: 4px; padding-inline: 8px; }
   .hero-portrait { aspect-ratio: 1.35; border-radius: 42% 42% 20px 20px / 45% 45% 20px 20px; }
   .hero-portrait img { object-position: center 22%; }
   .hero-marks { inset: 6% auto auto -12px; }
@@ -459,7 +493,6 @@ h1, h2, h3, .programme-title, .news-title {
   .hero h1 { font-size: clamp(2.5rem, 10vw, 3.5rem); }
   .hero-copy { max-inline-size: 42ch; }
   .hero-tour { inline-size: 100%; }
-  .hero-secondary { justify-content: space-between; row-gap: 6px; }
   .hero-portrait { aspect-ratio: 1.6; border-radius: 64px 64px 16px 16px; }
   .hero-portrait img { object-position: center 24%; }
   .hero-marks { inset: 3px auto auto 0; }
@@ -467,10 +500,30 @@ h1, h2, h3, .programme-title, .news-title {
 
 @media (max-width: 360px) {
   .hero-tour { font-size: 12px; gap: 6px; }
-  .language-tabs { gap: 5px; }
-  .language-tabs button { padding-inline: 9px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .pill { transition: none; }
 }
 
+
+@media (min-width: 1001px) and (max-width: 1150px) {
+  .site-header { gap: 12px; }
+  .desktop-nav { inline-size: auto; gap: 12px; }
+  .header-contact { inline-size: auto; }
+}
+@media (max-width: 560px) {
+  .site-header { gap: 6px; }
+  .language-picker { margin-inline-start: auto; }
+  .language-trigger { padding-inline: 10px; }
+}
+@media (max-width: 360px) {
+  .site-header { inline-size: calc(100% - 16px); gap: 4px; }
+  .language-trigger { gap: 5px; padding-inline: 8px; }
+  .school-crest { inline-size: 38px; }
+  .school-name-primary { font-size: 1rem; }
+}
+html:not(:lang(en)) :is(h1, h2, h3, .programme-title, .news-title, .benefit) {
+  line-height: 1.22;
+  letter-spacing: normal;
+  overflow-wrap: anywhere;
+}

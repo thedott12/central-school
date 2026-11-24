@@ -6,15 +6,17 @@
   <title>Home - CISBangkok</title>
   <meta name="description" content="At Central International School, your child will speak English confidently in no time.">
   <link rel="icon" type="image/jpeg" href="./assets/favicon.jpg">
-  <link rel="stylesheet" href="./site.css">
-  <script src="./site.js" defer></script>
+  <link rel="stylesheet" href="./site.css?v=language-menu-2">
+  <script src="./locale-main.js" defer></script>
+  <script src="./locale-details.js" defer></script>
+  <script src="./site.js?v=language-menu-2" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
   <header class="site-header container">
     <a class="school-logo" href="./" aria-label="Central International School Bangkok">
       <span class="school-crest"><img src="./assets/logo.png" alt=""></span>
-      <span class="school-name">
+      <span class="school-name" lang="en">
         <span class="school-name-primary">CENTRAL</span>
         <span>INTERNATIONAL SCHOOL</span>
         <span class="school-name-campus">KIDSFIRST . BANGKOK</span>
@@ -28,6 +30,14 @@
     <a class="pill pill-dark header-contact" href="https://central-school.com/contact-us/">
       Contact Us <img src="./assets/arrow-white.svg" alt="">
     </a>
+    <details class="language-picker">
+      <summary class="pill language-trigger" lang="en"><img src="./assets/flag-gb.png" alt=""><span>English</span></summary>
+      <div class="language-options" role="group" aria-label="Site language">
+        <button type="button" lang="en" data-language="en" aria-pressed="true"><img src="./assets/flag-gb.png" width="18" height="18" alt=""> English</button>
+        <button type="button" lang="en" data-language="zh-Hans" aria-pressed="false"><img src="./assets/flag-cn.png" width="18" height="18" alt=""> Chinese</button>
+        <button type="button" lang="en" data-language="th" aria-pressed="false"><img src="./assets/flag-th.png" width="18" height="18" alt=""> Thai</button>
+      </div>
+    </details>
     <button type="button" class="mobile-menu" data-open="navigation" aria-label="Menu" aria-haspopup="dialog">
       <img src="./assets/menu.svg" alt="">
     </button>
@@ -42,15 +52,7 @@
           <a class="pill pill-yellow hero-tour" href="https://central-school.com/#fluentform_3" data-open="tour" aria-haspopup="dialog">
             BOOK A SCHOOL TOUR WITH US <img src="./assets/arrow.svg" alt="">
           </a>
-          <button type="button" class="text-button hero-more hero-more-desktop" data-open="intro" aria-haspopup="dialog">See More</button>
-        </div>
-        <div class="hero-secondary">
-          <div class="hero-languages" role="group" aria-label="Introduction language">
-            <button type="button" data-open="intro" data-intro-lang="en" aria-haspopup="dialog"><img src="./assets/flag-gb.png" width="18" height="18" alt=""> ENGLISH</button>
-            <button type="button" data-open="intro" data-intro-lang="zh-Hans" aria-haspopup="dialog"><img src="./assets/flag-cn.png" width="18" height="18" alt=""> CHINESE</button>
-            <button type="button" data-open="intro" data-intro-lang="th" aria-haspopup="dialog"><img src="./assets/flag-th.png" width="18" height="18" alt=""> THAI</button>
-          </div>
-          <button type="button" class="text-button hero-more hero-more-mobile" data-open="intro" aria-haspopup="dialog">See More</button>
+          <button type="button" class="text-button hero-more" data-open="intro" aria-haspopup="dialog">See More</button>
         </div>
       </div>
       <div class="hero-media">
@@ -114,19 +116,8 @@
       <div class="advantages container section">
         <div class="advantages-heading">
           <h2 id="advantages-title">Discover the Advantages of CIS for Early Education</h2>
-          <div class="language-tabs" role="tablist" aria-label="Advantages language">
-            <button type="button" id="tab-en" role="tab" aria-selected="true" aria-controls="benefits-en">
-              <img src="./assets/flag-gb.png" width="18" height="18" alt=""> ENGLISH
-            </button>
-            <button type="button" id="tab-zh-Hans" role="tab" aria-selected="false" aria-controls="benefits-zh-Hans" tabindex="-1">
-              <img src="./assets/flag-cn.png" width="18" height="18" alt=""> CHINESE
-            </button>
-            <button type="button" id="tab-th" role="tab" aria-selected="false" aria-controls="benefits-th" tabindex="-1">
-              <img src="./assets/flag-th.png" width="18" height="18" alt=""> THAI
-            </button>
-          </div>
         </div>
-        <div id="benefits-en" role="tabpanel" aria-labelledby="tab-en">
+        <div id="benefits-en" data-benefit-language="en">
           <ul class="benefit-list" lang="en">
             <li>
               <button type="button" class="benefit" data-open="advantages-en" aria-haspopup="dialog">
@@ -149,7 +140,7 @@
           </ul>
           <button type="button" class="text-button benefits-more" data-open="advantages-en" aria-haspopup="dialog">See More</button>
         </div>
-        <div id="benefits-zh-Hans" role="tabpanel" aria-labelledby="tab-zh-Hans" hidden>
+        <div id="benefits-zh-Hans" data-benefit-language="zh-Hans" hidden>
           <ul class="benefit-list" lang="zh-Hans">
             <li>
               <button type="button" class="benefit" data-open="advantages-zh-Hans" aria-haspopup="dialog">
@@ -172,7 +163,7 @@
           </ul>
           <button type="button" class="text-button benefits-more" data-open="advantages-zh-Hans" aria-haspopup="dialog">See More</button>
         </div>
-        <div id="benefits-th" role="tabpanel" aria-labelledby="tab-th" hidden>
+        <div id="benefits-th" data-benefit-language="th" hidden>
           <ul class="benefit-list" lang="th">
             <li>
               <button type="button" class="benefit" data-open="advantages-th" aria-haspopup="dialog">
@@ -367,25 +358,29 @@
 
   <template id="detail-mother-baby" data-title="Mother and Baby Club">
     <img class="details-image" src="./assets/mother-baby.png" alt="" loading="lazy">
-        <p>8 months - 3 year olds | offers a nurturing environment for mothers and their infants to connect, socialize, and engage in developmental activities.</p>
+        <h2 class="programme-age-heading">8 months - 3 year olds</h2>
+        <p>offers a nurturing environment for mothers and their infants to connect, socialize, and engage in developmental activities.</p>
         <a class="pill pill-blue" href="https://central-school.com/mother-and-baby-club/">See More <img src="./assets/arrow-white.svg" alt=""></a>
   </template>
 
   <template id="detail-nursery" data-title="Nursery">
     <img class="details-image" src="./assets/nursery.png" alt="" loading="lazy">
-        <p>1 - 2 year olds | With a curriculum tailored to engage and inspire, children participate in a variety of activities that promote creativity, exploration, and learning through play.</p>
+        <h2 class="programme-age-heading">1 - 2 year olds</h2>
+        <p>With a curriculum tailored to engage and inspire, children participate in a variety of activities that promote creativity, exploration, and learning through play.</p>
         <a class="pill pill-blue" href="https://central-school.com/nursery/">See More <img src="./assets/arrow-white.svg" alt=""></a>
   </template>
 
   <template id="detail-kindergarten" data-title="Kindergarten">
     <img class="details-image" src="./assets/kindergarten.png" alt="" loading="lazy">
-        <p>2 - 5 year olds | With a curriculum that emphasizes play-based learning, children engage in hands-on activities that promote creativity, critical thinking, and collaboration.</p>
+        <h2 class="programme-age-heading">2 - 5 year olds</h2>
+        <p>With a curriculum that emphasizes play-based learning, children engage in hands-on activities that promote creativity, critical thinking, and collaboration.</p>
         <a class="pill pill-blue" href="https://central-school.com/kindergarten/">See More <img src="./assets/arrow-white.svg" alt=""></a>
   </template>
 
   <template id="detail-elementary" data-title="Elementary">
     <img class="details-image" src="./assets/elementary.png" alt="" loading="lazy">
-        <p>6 - 12 year olds | With a focus on interactive learning and critical thinking, students are encouraged to explore their interests and develop a love for learning. The curriculum is tailored to meet the diverse needs of each child, ensuring that every student can thrive academically and socially.</p>
+        <h2 class="programme-age-heading">6 - 12 year olds</h2>
+        <p>With a focus on interactive learning and critical thinking, students are encouraged to explore their interests and develop a love for learning. The curriculum is tailored to meet the diverse needs of each child, ensuring that every student can thrive academically and socially.</p>
         <a class="pill pill-blue" href="https://central-school.com/elementary/">See More <img src="./assets/arrow-white.svg" alt=""></a>
   </template>
 
@@ -447,13 +442,12 @@
         <p>The prime reason for us to be the best choice for non-native English speaking kids and for the child starting school.</p>
         <h3>We Connect</h3>
         <p>We pride ourselves to have the most caring, passionate and professional teachers.</p>
-        <p lang="zh-Hans">- CIS最大的特色：确保你的孩子英文和中文的学习顶呱呱，迈向卓越人生！-</p>
+        <p lang="zh-Hans" data-english="What sets CIS apart is helping your child excel in English and Chinese and go on to excel in life!">- CIS最大的特色：确保你的孩子英文和中文的学习顶呱呱，迈向卓越人生！-</p>
         <p>Ensuring Excellence in both English and Chinese</p>
   </template>
 
   <template id="detail-life" data-title="CIS Life">
-    <h2>5-Year-Old Student<br>Speaks THREE Languages</h2>
-        <p lang="zh-Hans">五岁的学生会说3种语言</p>
+    <h2 data-zh-heading="五岁的学生会说3种语言">5-Year-Old Student<br>Speaks THREE Languages</h2>
         <div class="video-grid"><a class="video-preview" href="https://youtube.com/shorts/pPOJzuImxbE?feature=share" aria-label="ENGLISH"><img src="./assets/life-1.png" alt="" loading="lazy"><span>ENGLISH</span></a>
     <a class="video-preview" href="https://youtube.com/shorts/80eTmvHTEdI" aria-label="CHINESE"><img src="./assets/life-2.png" alt="" loading="lazy"><span>CHINESE</span></a>
     <a class="video-preview" href="https://youtu.be/txeiJ8TMFSY?si=buhSp7eOhiHgr8KP" aria-label="THAI"><img src="./assets/life-3.png" alt="" loading="lazy"><span>THAI</span></a></div>
@@ -462,8 +456,7 @@
         <div class="video-grid"><a class="video-preview" href="https://youtube.com/shorts/g7XKhWna49o?si=WWCeZfRHyGpk9RVj" aria-label="Watch the Fun, Be Part of it! — YouTube 1"><img src="./assets/life-5.png" alt="" loading="lazy"></a>
     <a class="video-preview" href="https://youtube.com/shorts/55BZIVPZS1Y?si=DV01GAj1GyP5drSl" aria-label="Watch the Fun, Be Part of it! — YouTube 2"><img src="./assets/life-6.png" alt="" loading="lazy"></a>
     <a class="video-preview" href="https://youtube.com/shorts/h7rJ4lu9CMw?si=FJQVWPe2xFR86nX3" aria-label="Watch the Fun, Be Part of it! — YouTube 3"><img src="./assets/life-7.png" alt="" loading="lazy"></a></div>
-        <h2>Confident, Cheerful, Lively, Love-Learning Children</h2>
-        <p lang="zh-Hans">就读京英的孩子们充满自信、开朗、活泼、爱学习的人格特质!</p>
+        <h2 data-zh-heading="就读京英的孩子们充满自信、开朗、活泼、爱学习的人格特质!">Confident, Cheerful, Lively, Love-Learning Children</h2>
         <h2>We Are Always Open For New Students!</h2>
         <p>Our dedicated faculty and staff are eager to get to know your child as a unique individual and to collaborate with you in crafting a tailored educational experience that will set your child up for lasting success.</p>
         <a href="https://page.line.me/?accountId=kidsfirst"><p className="leading-[1.32]">Contact us</p></a>
