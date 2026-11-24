@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home - CISBangkok</title>
+  <meta name="description" content="At Central International School, your child will speak English confidently in no time.">
+  <link rel="icon" type="image/jpeg" href="./assets/favicon.jpg">
+  <link rel="stylesheet" href="./site.css">
+  <script src="./site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header container">
+    <a class="school-logo" href="./" aria-label="Central International School Bangkok">
+      <span class="school-crest"><img src="./assets/logo.png" alt=""></span>
+      <span class="school-name">
+        <span class="school-name-primary">CENTRAL</span>
+        <span>INTERNATIONAL SCHOOL</span>
+        <span class="school-name-campus">KIDSFIRST . BANGKOK</span>
+      </span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="./" aria-current="page">Home</a>
+      <button type="button" data-open="navigation" aria-haspopup="dialog">Admissions</button>
+      <button type="button" data-open="navigation" aria-haspopup="dialog">Academic</button>
+    </nav>
+    <a class="pill pill-dark header-contact" href="https://central-school.com/contact-us/">
+      Contact Us <img src="./assets/arrow-white.svg" alt="">
+    </a>
+    <button type="button" class="mobile-menu" data-open="navigation" aria-label="Menu" aria-haspopup="dialog">
+      <img src="./assets/menu.svg" alt="">
+    </button>
+  </header>
+
+  <main id="content" tabindex="-1">
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h1 id="hero-title">No English?<br><span>No Problem!</span></h1>
+        <p class="hero-copy">At Central International School, your child will speak English confidently in no time.</p>
+        <div class="hero-actions">
+          <a class="pill pill-yellow hero-tour" href="https://central-school.com/#fluentform_3" data-open="tour" aria-haspopup="dialog">
+            BOOK A SCHOOL TOUR WITH US <img src="./assets/arrow.svg" alt="">
+          </a>
+          <button type="button" class="text-button hero-more hero-more-desktop" data-open="intro" aria-haspopup="dialog">See More</button>
+        </div>
+        <div class="hero-secondary">
+          <div class="hero-languages" role="group" aria-label="Introduction language">
+            <button type="button" data-open="intro" data-intro-lang="en" aria-haspopup="dialog"><img src="./assets/flag-gb.png" width="18" height="18" alt=""> ENGLISH</button>
+            <button type="button" data-open="intro" data-intro-lang="zh-Hans" aria-haspopup="dialog"><img src="./assets/flag-cn.png" width="18" height="18" alt=""> CHINESE</button>
+            <button type="button" data-open="intro" data-intro-lang="th" aria-haspopup="dialog"><img src="./assets/flag-th.png" width="18" height="18" alt=""> THAI</button>
+          </div>
+          <button type="button" class="text-button hero-more hero-more-mobile" data-open="intro" aria-haspopup="dialog">See More</button>
+        </div>
+      </div>
+      <div class="hero-media">
+        <div class="hero-portrait">
+          <img src="./assets/hero.png" width="1707" height="2560" alt="Two Central International School students" fetchpriority="high">
+        </div>
+        <picture class="hero-marks">
+          <source media="(max-width: 559px)" srcset="./assets/hero-marks-mobile.svg">
+          <img src="./assets/hero-marks.svg" alt="">
+        </picture>
+      </div>
+    </section>
+
+    <section class="programmes container section" aria-labelledby="programmes-title">
+      <h2 id="programmes-title">Our Academics</h2>
+      <ul class="programme-list">
+        <li>
+          <a class="programme-card mother-baby" href="https://central-school.com/mother-and-baby-club/" data-open="mother-baby" aria-haspopup="dialog">
+            <span class="programme-mark">
+              <img class="programme-image" src="./assets/mother-baby.png" alt="" loading="lazy">
+              <img src="./assets/details.svg" alt="">
+            </span>
+            <span class="programme-title">Mother and Baby Club</span>
+            <span class="programme-age">8 months - 3 year olds</span>
+          </a>
+        </li>
+        <li>
+          <a class="programme-card nursery" href="https://central-school.com/nursery/" data-open="nursery" aria-haspopup="dialog">
+            <span class="programme-mark">
+              <img class="programme-image" src="./assets/nursery.png" alt="" loading="lazy">
+              <img src="./assets/details.svg" alt="">
+            </span>
+            <span class="programme-title">Nursery</span>
+            <span class="programme-age">1 - 2 year olds</span>
+          </a>
+        </li>
+        <li>
+          <a class="programme-card kindergarten" href="https://central-school.com/kindergarten/" data-open="kindergarten" aria-haspopup="dialog">
+            <span class="programme-mark">
+              <img class="programme-image" src="./assets/kindergarten.png" alt="" loading="lazy">
+              <img src="./assets/details.svg" alt="">
+            </span>
+            <span class="programme-title">Kindergarten</span>
+            <span class="programme-age">2 - 5 year olds</span>
+          </a>
+        </li>
+        <li>
+          <a class="programme-card elementary" href="https://central-school.com/elementary/" data-open="elementary" aria-haspopup="dialog">
+            <span class="programme-mark">
+              <img class="programme-image" src="./assets/elementary.png" alt="" loading="lazy">
+              <img src="./assets/details.svg" alt="">
+            </span>
+            <span class="programme-title">Elementary</span>
+            <span class="programme-age">6 - 12 year olds</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="advantages-band" aria-labelledby="advantages-title">
+      <div class="advantages container section">
+        <div class="advantages-heading">
+          <h2 id="advantages-title">Discover the Advantages of CIS for Early Education</h2>
+          <div class="language-tabs" role="tablist" aria-label="Advantages language">
+            <button type="button" id="tab-en" role="tab" aria-selected="true" aria-controls="benefits-en">
+              <img src="./assets/flag-gb.png" width="18" height="18" alt=""> ENGLISH
+            </button>
+            <button type="button" id="tab-zh-Hans" role="tab" aria-selected="false" aria-controls="benefits-zh-Hans" tabindex="-1">
+              <img src="./assets/flag-cn.png" width="18" height="18" alt=""> CHINESE
+            </button>
+            <button type="button" id="tab-th" role="tab" aria-selected="false" aria-controls="benefits-th" tabindex="-1">
+              <img src="./assets/flag-th.png" width="18" height="18" alt=""> THAI
+            </button>
+          </div>
+        </div>
+        <div id="benefits-en" role="tabpanel" aria-labelledby="tab-en">
+          <ul class="benefit-list" lang="en">
+            <li>
+              <button type="button" class="benefit" data-open="advantages-en" aria-haspopup="dialog">
+                <img src="./assets/benefit-care.png" alt="">
+                <span>Unparalleled care and support for your child</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="benefit" data-open="advantages-en" aria-haspopup="dialog">
+                <img src="./assets/benefit-talk.png" alt="">
+                <span>Expertise in quickly teaching your child to communicate effectively in English</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="benefit" data-open="advantages-en" aria-haspopup="dialog">
+                <img src="./assets/benefit-smile.png" alt="">
+                <span>A joyful and dynamic learning environment that fosters happiness and growth</span>
+              </button>
+            </li>
+          </ul>
+          <button type="button" class="text-button benefits-more" data-open="advantages-en" aria-haspopup="dialog">See More</button>
+        </div>
+        <div id="benefits-zh-Hans" role="tabpanel" aria-labelledby="tab-zh-Hans" hidden>
+          <ul class="benefit-list" lang="zh-Hans">
+            <li>
+              <button type="button" class="benefit" data-open="advantages-zh-Hans" aria-haspopup="dialog">
+                <img src="./assets/benefit-care.png" alt="">
+                <span>最有爱心的照顾</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="benefit" data-open="advantages-zh-Hans" aria-haspopup="dialog">
+                <img src="./assets/benefit-talk.png" alt="">
+                <span>最快速教会你孩子用英语沟通的技巧</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="benefit" data-open="advantages-zh-Hans" aria-haspopup="dialog">
+                <img src="./assets/benefit-smile.png" alt="">
+                <span>最快乐活泼的学习环境</span>
+              </button>
+            </li>
+          </ul>
+          <button type="button" class="text-button benefits-more" data-open="advantages-zh-Hans" aria-haspopup="dialog">See More</button>
+        </div>
+        <div id="benefits-th" role="tabpanel" aria-labelledby="tab-th" hidden>
+          <ul class="benefit-list" lang="th">
+            <li>
+              <button type="button" class="benefit" data-open="advantages-th" aria-haspopup="dialog">
+                <img src="./assets/benefit-care.png" alt="">
+                <span>การดูแลเด็กและการช่วยเหลือเด็กที่ยอดเยี่ยม</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="benefit" data-open="advantages-th" aria-haspopup="dialog">
+                <img src="./assets/benefit-talk.png" alt="">
+                <span>เราเชี่ยวชาญในการสอนที่มีประสิทธิภาพ ให้เด็กมีการสื่อสารภาษาอังกฤษได้อย่างรวดเร็ว</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="benefit" data-open="advantages-th" aria-haspopup="dialog">
+                <img src="./assets/benefit-smile.png" alt="">
+                <span>สภาพแวดล้อมที่สนุกสนาน มีชีวิตชีวาที่ส่งเสริมความสุขและการเจริญเติบโตของเด็ก</span>
+              </button>
+            </li>
+          </ul>
+          <button type="button" class="text-button benefits-more" data-open="advantages-th" aria-haspopup="dialog">See More</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="news container section" aria-labelledby="news-title">
+      <h2 id="news-title">Latest Updates</h2>
+      <ul class="news-list">
+        <li>
+          <a class="news-link class-demo" href="https://central-school.com/class-demo-2025/">
+            <span class="news-visual"><img class="news-image" src="./assets/class-demo.png" alt="" loading="lazy"></span>
+            <span class="news-caption">
+              <span class="news-title">Class demo 2025</span>
+              <span class="news-more">See More</span>
+              <img src="./assets/news-arrow.svg" alt="">
+            </span>
+          </a>
+        </li>
+        <li>
+          <a class="news-link brain-olympics" href="https://central-school.com/brain-olympics-2025/">
+            <span class="news-visual"><img class="news-image" src="./assets/brain-olympics.png" alt="" loading="lazy"></span>
+            <span class="news-caption">
+              <span class="news-title">Brain olympics 2025</span>
+              <span class="news-more">See More</span>
+              <img src="./assets/news-arrow.svg" alt="">
+            </span>
+          </a>
+        </li>
+        <li>
+          <a class="news-link songkran" href="https://central-school.com/songkran-2025/">
+            <span class="news-visual"><img class="news-image" src="./assets/songkran.png" alt="" loading="lazy"></span>
+            <span class="news-caption">
+              <span class="news-title">Songkran Celebration</span>
+              <span class="news-more">See More</span>
+              <img src="./assets/news-arrow.svg" alt="">
+            </span>
+          </a>
+        </li>
+      </ul>
+      <button type="button" class="text-button" data-open="news" aria-haspopup="dialog">The Dragon News</button>
+    </section>
+
+    <section class="school-life-band" aria-labelledby="school-life-title">
+      <div class="school-life container section">
+        <h2 id="school-life-title">See Us In Action</h2>
+        <ul class="topic-list">
+          <li>
+            <button type="button" data-open="values" aria-haspopup="dialog">
+              Why Central International School <img src="./assets/plus.svg" alt="">
+            </button>
+          </li>
+          <li>
+            <button type="button" data-open="life" aria-haspopup="dialog">
+              CIS Life <img src="./assets/plus.svg" alt="">
+            </button>
+          </li>
+          <li>
+            <button type="button" data-open="podcast" aria-haspopup="dialog">
+              DragonTalk PODCAST <img src="./assets/plus.svg" alt="">
+            </button>
+          </li>
+          <li>
+            <button type="button" data-open="book" aria-haspopup="dialog">
+              THE DRAGON ENGLISH <img src="./assets/plus.svg" alt="">
+            </button>
+          </li>
+          <li>
+            <button type="button" data-open="events" aria-haspopup="dialog">
+              CIS Events <img src="./assets/plus.svg" alt="">
+            </button>
+          </li>
+          <li>
+            <button type="button" data-open="curriculum" aria-haspopup="dialog">
+              U.S. California Curriculum <img src="./assets/plus.svg" alt="">
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="tour container" aria-labelledby="tour-title">
+      <h2 id="tour-title">BOOK A SCHOOL TOUR WITH US</h2>
+      <a class="pill pill-yellow" href="https://central-school.com/#fluentform_3" data-open="tour" aria-haspopup="dialog">
+        Contact Us <img src="./assets/arrow.svg" alt="">
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <ul class="partner-list">
+      <li><a href="https://www.moe.go.th"><img src="./assets/moe.png" alt="Ministry of Education" loading="lazy"></a></li>
+      <li><a href="https://opec.go.th"><img src="./assets/opec.png" alt="Office of the Private Education Commission" loading="lazy"></a></li>
+      <li><a href="https://www.onesqa.or.th/en/index.php"><img src="./assets/onesqa.png" alt="Office for National Education Standards and Quality Assessment" loading="lazy"></a></li>
+      <li><a href="https://www.isat.or.th/home/"><img src="./assets/isat.png" alt="International Schools Association of Thailand" loading="lazy"></a></li>
+    </ul>
+    <p>Copyright © | All Rights Reserved</p>
+  </footer>
+
+  <dialog class="details-dialog" id="details-dialog" aria-labelledby="details-title" closedby="any">
+    <header class="details-header">
+      <h1 id="details-title"></h1>
+      <form method="dialog">
+        <button class="close-button" type="submit" aria-label="Close" autofocus><img src="./assets/close.svg" alt=""></button>
+      </form>
+    </header>
+    <div class="details-body"></div>
+  </dialog>
+  <template id="detail-intro" data-title="No English? No Problem!">
+    <p>At Central International School, your child will speak English confidently in no time. <br aria-hidden /> Study with us for just two years — we guarantee your child's English skills will thrive at any school worldwide.</p>
+        <hr>
+        <h2 lang="zh-Hans">没有英语基础? 没问题!</h2>
+        <p lang="zh-Hans">在CIS国际学校，您的孩子很快就能自信地说英语。与我们一起学习仅仅两年-我们保证他（她）英语技能在世界各地的任何学校茁壮成长。</p>
+        <h2 lang="th">ไม่มีภาษาอังกฤษ? ไม่มีปัญหา!</h2>
+        <p lang="th">ที่โรงเรียนนานาชาติเซ็นทรัล บุตรหลานของคุณจะพูดภาษาอังกฤษได้อย่างมั่นใจในเวลาไม่นานเรียนกับเราเพียงสองปี — เรารับประกันทักษะภาษาอังกฤษของเขาที่จะเติบโตในโรงเรียนใดก็ได้ทั่วโลก</p>
+  </template>
+
+  <template id="detail-navigation" data-title="Home">
+    <nav aria-label="Main navigation"><ul class="dialog-nav">
+      <li><a href="./" aria-current="page">Home</a></li>
+      <li><a href="https://central-school.com/?page_id=3027">Admissions</a></li>
+      <li><a href="https://central-school.com/fees/">Fees</a></li>
+      <li><a href="https://central-school.com/calendar/">Calendar</a></li>
+      <li><a href="https://central-school.com/academic/">Academic</a></li>
+      <li><a href="https://central-school.com/curriculum/">Curriculum</a></li>
+      <li><a href="https://central-school.com/mother-and-baby-club/">Mother and Baby Club</a></li>
+      <li><a href="https://central-school.com/nursery/">Nursery</a></li>
+      <li><a href="https://central-school.com/kindergarten/">Kindergarten</a></li>
+      <li><a href="https://central-school.com/elementary/">Elementary</a></li>
+      <li><a href="https://central-school.com/contact-us/">Contact Us</a></li>
+    </ul></nav>
+  </template>
+
+  <template id="detail-tour" data-title="BOOK A SCHOOL TOUR WITH US">
+    <p class="tour-preview-note">Form preview. <a href="https://central-school.com/#fluentform_3">Open the school’s form to book a tour.</a></p>
+    <div class="tour-preview" role="group" aria-label="School tour form preview">
+      <label>First Name
+        <input type="text" placeholder="Enter Your First Name" autocomplete="off">
+      </label>
+      <label>Last Name
+        <input type="text" placeholder="Enter Your Last Name" autocomplete="off">
+      </label>
+      <label>Email
+        <input type="email" placeholder="Enter Your Email" autocomplete="off">
+      </label>
+      <label>Contact (Phone or Line)
+        <input type="text" placeholder="Enter Your Phone Number Or Line ID" autocomplete="off">
+      </label>
+      <label>Child Date of Birth
+        <input type="text" placeholder="YYYY/MM/DD" autocomplete="off">
+      </label>
+      <label>Book a School Tour – Date &amp; Time
+        <input type="text" placeholder="YYYY/MM/DD-Time" autocomplete="off">
+      </label>
+      <label>Child First-Last Name
+        <input type="text" autocomplete="off">
+      </label>
+      <fieldset class="tour-options">
+        <legend>How Did Your Hear About Us ?</legend>
+        <label><input type="checkbox"> Facebook</label>
+        <label><input type="checkbox"> Instagram</label>
+        <label><input type="checkbox"> TikTok</label>
+        <label><input type="checkbox"> Google</label>
+        <label><input type="checkbox"> Friend</label>
+        <label><input type="checkbox"> Other</label>
+      </fieldset>
+      <label>Send Us A Message
+        <textarea rows="3" autocomplete="off"></textarea>
+      </label>
+      <button class="pill pill-blue" type="button" disabled>Submit Form <img src="./assets/arrow-white.svg" alt=""></button>
+    </div>
+  </template>
+
+  <template id="detail-mother-baby" data-title="Mother and Baby Club">
+    <img class="details-image" src="./assets/mother-baby.png" alt="" loading="lazy">
+        <p>8 months - 3 year olds | offers a nurturing environment for mothers and their infants to connect, socialize, and engage in developmental activities.</p>
+        <a class="pill pill-blue" href="https://central-school.com/mother-and-baby-club/">See More <img src="./assets/arrow-white.svg" alt=""></a>
+  </template>
+
+  <template id="detail-nursery" data-title="Nursery">
+    <img class="details-image" src="./assets/nursery.png" alt="" loading="lazy">
+        <p>1 - 2 year olds | With a curriculum tailored to engage and inspire, children participate in a variety of activities that promote creativity, exploration, and learning through play.</p>
+        <a class="pill pill-blue" href="https://central-school.com/nursery/">See More <img src="./assets/arrow-white.svg" alt=""></a>
+  </template>
+
+  <template id="detail-kindergarten" data-title="Kindergarten">
+    <img class="details-image" src="./assets/kindergarten.png" alt="" loading="lazy">
+        <p>2 - 5 year olds | With a curriculum that emphasizes play-based learning, children engage in hands-on activities that promote creativity, critical thinking, and collaboration.</p>
+        <a class="pill pill-blue" href="https://central-school.com/kindergarten/">See More <img src="./assets/arrow-white.svg" alt=""></a>
+  </template>
+
+  <template id="detail-elementary" data-title="Elementary">
+    <img class="details-image" src="./assets/elementary.png" alt="" loading="lazy">
+        <p>6 - 12 year olds | With a focus on interactive learning and critical thinking, students are encouraged to explore their interests and develop a love for learning. The curriculum is tailored to meet the diverse needs of each child, ensuring that every student can thrive academically and socially.</p>
+        <a class="pill pill-blue" href="https://central-school.com/elementary/">See More <img src="./assets/arrow-white.svg" alt=""></a>
+  </template>
+
+  <template id="detail-advantages-en" data-title="Discover the Advantages of CIS for Early Education">
+    <p lang="en">If your child is starting kindergarten, we highly recommend choosing CIS as your first choice. CIS offers the highest value for your child’s education. Here are three key characteristics that set CIS apart</p>
+        <ul class="detail-list" lang="en"><li>Unparalleled care and support for your child</li><li>Expertise in quickly teaching your child to communicate effectively in English</li><li>A joyful and dynamic learning environment that fosters happiness and growth</li></ul>
+        <div class="video-grid"><a class="video-preview" href="https://youtu.be/qHGVGDXFRjw?si=_h-cYi95P0vNlBeH" aria-label="CIS — YouTube 1"><img src="./assets/adv-1.png" alt="" loading="lazy"></a>
+    <a class="video-preview" href="https://youtu.be/TFRUKfLwfO0?si=aFu7LYPPOxLndzAC" aria-label="CIS — YouTube 2"><img src="./assets/adv-2.png" alt="" loading="lazy"></a>
+    <a class="video-preview" href="https://youtube.com/shorts/EFgD9mh3MpM?feature=share" aria-label="CIS — YouTube 3"><img src="./assets/adv-3.png" alt="" loading="lazy"></a>
+    <a class="video-preview" href="https://youtu.be/Hd9LOcbXWmQ" aria-label="CIS — YouTube 4"><img src="./assets/adv-4.png" alt="" loading="lazy"></a>
+    <a class="video-preview" href="https://youtu.be/_7raOib9AMU" aria-label="CIS — YouTube 5"><img src="./assets/adv-5.png" alt="" loading="lazy"></a>
+    <a class="video-preview" href="https://youtu.be/_fNBjxbRPyg" aria-label="CIS — YouTube 6"><img src="./assets/adv-6.png" alt="" loading="lazy"></a></div>
+  </template>
+
+  <template id="detail-advantages-zh-Hans" data-title="Discover the Advantages of CIS for Early Education">
+    <p lang="zh-Hans">如果你的孩子正要就读幼儿园，强烈的建议你 CIS 绝对是你的首选，CIS 绝对是CP 值最高的学校！它具备以下3个特点</p>
+        <ul class="detail-list" lang="zh-Hans"><li>最有爱心的照顾</li><li>最快速教会你孩子用英语沟通的技巧</li><li>最快乐活泼的学习环境</li></ul>
+        <div class="video-grid"><a class="video-preview" href="https://youtu.be/qHGVGDXFRjw?si=_h-cYi95P0vNlBeH" aria-label="CIS — YouTube 1"><img src="./assets/adv-1.png" alt="" loading="lazy"></a>
+    <a class="video-preview" href="https://youtu.be/TFRUKfLwfO0?si=aFu7LYPPOxLndzAC" aria-label="CIS — YouTube 2"><img src="./assets/adv-2.png" alt="" loading="lazy"></a>
+    <a class="video-preview" href="https://youtube.com/shorts/EFgD9mh3MpM?feature=share" aria-label="CIS — YouTube 3"><img src="./assets/adv-3.png" alt="" loading="lazy"></a>
+    <a class="video-preview" href="https://youtu.be/Hd9LOcbXWmQ" aria-label="CIS — YouTube 4"><img src="./assets/adv-4.png" alt="" loading="lazy"></a>
+    <a class="video-preview" href="https://youtu.be/_7raOib9AMU" aria-label="CIS — YouTube 5"><img src="./assets/adv-5.png" alt="" loading="lazy"></a>
+    <a class="video-preview" href="https://youtu.be/_fNBjxbRPyg" aria-label="CIS — YouTube 6"><img src="./assets/adv-6.png" alt="" loading="lazy"></a></div>
+  </template>
+
+  <template id="detail-advantages-th" data-title="Discover the Advantages of CIS for Early Education">
+    <p lang="th">หากท่านมีบุตรหลานที่สนใจเข้าโรงเรียนอนุบาล เราขอแนะนำโรงเรียนนานาชาติเซ็นทรัลเป็นตัวเลือกอันดับหนึ่ง เพราะที่โรงเรียนของเราคำนึงถึงคุณภาพทางการศึกษาของบุตรหลาน และนี่ีคือปัจจัยหลักที่ทำให้โรงเรียนของเราแตกต่าง</p>
+        <ul class="detail-list" lang="th"><li>การดูแลเด็กและการช่วยเหลือเด็กที่ยอดเยี่ยม</li><li>เราเชี่ยวชาญในการสอนที่มีประสิทธิภาพ ให้เด็กมีการสื่อสารภาษาอังกฤษได้อย่างรวดเร็ว</li><li>สภาพแวดล้อมที่สนุกสนาน มีชีวิตชีวาที่ส่งเสริมความสุขและการเจริญเติบโตของเด็ก</li></ul>
+        <div class="video-grid"><a class="video-preview" href="https://youtu.be/qHGVGDXFRjw?si=_h-cYi95P0vNlBeH" aria-label="CIS — YouTube 1"><img src="./assets/adv-1.png" alt="" loading="lazy"></a>
+    <a class="video-preview" href="https://youtu.be/TFRUKfLwfO0?si=aFu7LYPPOxLndzAC" aria-label="CIS — YouTube 2"><img src="./assets/adv-2.png" alt="" loading="lazy"></a>
+    <a class="video-preview" href="https://youtube.com/shorts/EFgD9mh3MpM?feature=share" aria-label="CIS — YouTube 3"><img src="./assets/adv-3.png" alt="" loading="lazy"></a>
+    <a class="video-preview" href="https://youtu.be/Hd9LOcbXWmQ" aria-label="CIS — YouTube 4"><img src="./assets/adv-4.png" alt="" loading="lazy"></a>
+    <a class="video-preview" href="https://youtu.be/_7raOib9AMU" aria-label="CIS — YouTube 5"><img src="./assets/adv-5.png" alt="" loading="lazy"></a>
+    <a class="video-preview" href="https://youtu.be/_fNBjxbRPyg" aria-label="CIS — YouTube 6"><img src="./assets/adv-6.png" alt="" loading="lazy"></a></div>
+  </template>
+
+  <template id="detail-values" data-title="Why Central International School">
+    <h2>Core Values</h2>
+        <p>Our school’s core values emphasize a student-centered approach, fostering creativity, ensuring safety, and prioritizing student care.</p>
+        <h2>School Mission</h2>
+        <p>To become a model of excellence in education, where students flourish academically and become visionary global citizens who embrace diversity, social responsibility, and leadership.</p>
+        <h2>School Vision</h2>
+        <p>To inspire curiosity and foster a student-centered culture and provide quality education that will equip each student the global leaders of tomorrow.</p>
+        <div class="image-grid image-grid-pair"><img src="./assets/values-1.png" alt="" loading="lazy">
+    <img src="./assets/values-2.png" alt="" loading="lazy"></div>
+        <a href="https://central-school.com/curriculum/"><p className="leading-[1.32]">Our Curriculum</p></a>
+        <h2>why choose us</h2>
+        <p>Central International School prides itself on being a welcoming and caring community, a proud legacy of providing exeptional educational opportunities. The academic development of your child is our first priority, and our devoted staff members demonstrate excitement, dedication, and advanced teaching abilities.</p>
+        <p>Every day, we work to provide an atmosphere where each student can suceed to the fullest extent possible.</p>
+        <ul class="detail-list"><li>Brain Developing Activities</li><li>Fun Interactive Classes</li><li>Early Reading Program</li><li>World Class Curriculum</li><li>Effectual Hands-On Learning</li><li>Diverse Extracurricular Activities</li></ul>
+        <a class="video-preview" href="https://youtu.be/S9iLMXPpOUE?si=LyLtR7OxqeCfeQx7" aria-label="Why Central International School — YouTube"><img src="./assets/values-3.png" alt="" loading="lazy"></a>
+        <h2>To The Journey Ahead</h2>
+        <p>Gain Valuable Knowledge & Experience</p>
+        <h2>CIS Life</h2>
+        <p>Central International School prides itself on being a welcoming and caring community, a proud legacy of providing exceptional educational opportunities.</p>
+        <h3>For Non-Native English Speakers</h3>
+        <p>Our seamless teaching techniques ensure a pressure-free and rapid acquisition of English communication skills for Non-Native English speakers.</p>
+        <h3>You Apply</h3>
+        <p>The prime reason for us to be the best choice for non-native English speaking kids and for the child starting school.</p>
+        <h3>We Connect</h3>
+        <p>We pride ourselves to have the most caring, passionate and professional teachers.</p>
+        <p lang="zh-Hans">- CIS最大的特色：确保你的孩子英文和中文的学习顶呱呱，迈向卓越人生！-</p>
+        <p>Ensuring Excellence in both English and Chinese</p>
+  </template>
+
+  <template id="detail-life" data-title="CIS Life">
+    <h2>5-Year-Old Student<br>Speaks THREE Languages</h2>
+        <p lang="zh-Hans">五岁的学生会说3种语言</p>
+        <div class="video-grid"><a class="video-preview" href="https://youtube.com/shorts/pPOJzuImxbE?feature=share" aria-label="ENGLISH"><img src="./assets/life-1.png" alt="" loading="lazy"><span>ENGLISH</span></a>
+    <a class="video-preview" href="https://youtube.com/shorts/80eTmvHTEdI" aria-label="CHINESE"><img src="./assets/life-2.png" alt="" loading="lazy"><span>CHINESE</span></a>
+    <a class="video-preview" href="https://youtu.be/txeiJ8TMFSY?si=buhSp7eOhiHgr8KP" aria-label="THAI"><img src="./assets/life-3.png" alt="" loading="lazy"><span>THAI</span></a></div>
+        <h2>Watch the Fun, Be Part of it!</h2>
+        <p>Watch how our community dances, laughs, and creates unforgettable memories. Enroll today and let your child experience the excitement firsthand!</p>
+        <div class="video-grid"><a class="video-preview" href="https://youtube.com/shorts/g7XKhWna49o?si=WWCeZfRHyGpk9RVj" aria-label="Watch the Fun, Be Part of it! — YouTube 1"><img src="./assets/life-5.png" alt="" loading="lazy"></a>
+    <a class="video-preview" href="https://youtube.com/shorts/55BZIVPZS1Y?si=DV01GAj1GyP5drSl" aria-label="Watch the Fun, Be Part of it! — YouTube 2"><img src="./assets/life-6.png" alt="" loading="lazy"></a>
+    <a class="video-preview" href="https://youtube.com/shorts/h7rJ4lu9CMw?si=FJQVWPe2xFR86nX3" aria-label="Watch the Fun, Be Part of it! — YouTube 3"><img src="./assets/life-7.png" alt="" loading="lazy"></a></div>
+        <h2>Confident, Cheerful, Lively, Love-Learning Children</h2>
+        <p lang="zh-Hans">就读京英的孩子们充满自信、开朗、活泼、爱学习的人格特质!</p>
+        <h2>We Are Always Open For New Students!</h2>
+        <p>Our dedicated faculty and staff are eager to get to know your child as a unique individual and to collaborate with you in crafting a tailored educational experience that will set your child up for lasting success.</p>
+        <a href="https://page.line.me/?accountId=kidsfirst"><p className="leading-[1.32]">Contact us</p></a>
+        <p>CIS Bangkok</p>
+        <h2>We Are One Of The BEST</h2>
+        <p>At Central International School Bangkok, your child will be more enthusiastic about learning, confident in speaking, and fluent in foreign languages while fulfilling all the intellectual needs necessary. We guarantee a high-quality American education through a fast learning process.</p>
+        <ul class="stat-list"><li><strong>English Speaking Skill (Non-Native)</strong><p>99%</p></li><li><strong>Chinese Speaking Skill (Non-Native)</strong><p>85%</p></li><li><strong>Thai Speaking Skill (Non-Native)</strong><p>90%</p></li></ul>
+        <h2>Students from over 10 countries</h2>
+        <img class="details-image" src="./assets/life-8.png" alt="" loading="lazy">
+        <h2>We Are One Of The BEST</h2>
+        <p>Our international school offers students from different cultures and backgrounds a unique opportunity to learn and grow together.</p>
+        <p>Join a diverse student body and experience an unparalleled education at one of the top international schools in Bangkok.</p>
+        <a class="video-preview" href="https://youtu.be/wRTO9InoywE?si=n5H1xl_Ich7Pul3u" aria-label="See Us In Action — YouTube"><img src="./assets/life-25.png" alt="" loading="lazy"></a>
+  </template>
+
+  <template id="detail-podcast" data-title="DragonTalk PODCAST">
+    <h2>CIS - Students' Podcast</h2>
+        <p>Welcome to DragonTalk, the official student podcast of Central International School (CIS)! This is a safe and fun space where our students take the mic to share their thoughts, opinions, and experiences—from current events to school life and everything in between.</p>
+        <p>More than just conversations, DragonTalk is a platform that empowers our students to grow in confidence and develop their English-speaking skills through real, unscripted dialogue. At CIS, we believe in giving our learners a voice—and DragonTalk is where those voices come alive.</p>
+        <p>Tune in and hear the thoughts of tomorrow’s leaders—one episode at a time!</p>
+    <p><strong>See More</strong></p>
+    <a class="video-preview" href="https://youtu.be/QsFk6gTwRYE" aria-label="DragonTalk PODCAST — YouTube"><img src="./assets/podcast-1.png" alt="" loading="lazy"></a>
+  </template>
+
+  <template id="detail-book" data-title="THE DRAGON ENGLISH">
+    <p>Exclusively Created by Central International School – Dragon English Combines Innovation and Excellence to Transform Learning!</p>
+        <p>Every page is an adventure, packed with interactive lessons and playful challenges that keep little learners engaged and entertained. Whether at home, in school, or on the go, The Dragon English Book makes every moment magical.</p>
+        <a href="https://issuu.com/cisbangkok/docs/website_book-2"><p className="leading-[1.32]">SEE MORE</p></a>
+        <img class="details-image" src="./assets/book-1.png" alt="" loading="lazy">
+  </template>
+
+  <template id="detail-events" data-title="CIS Events">
+    <p>Bring out the best in us</p>
+        <a href="https://central-school.com/calendar/"><p className="leading-[1.32]">SEE CALENDAR</p></a>
+        <h2>Halloween Party<br>Glow in The Dark</h2>
+        <p>Experience a magical Halloween party inspired by Alice in Wonderland! Delight in student performances, themed booths, and the chance to win amazing prizes.</p>
+        <p>CIS Events Hall</p>
+        <p>25 October 2024</p>
+        <p>CIS Events Hall</p>
+        <p>25 October 2024</p>
+        <img class="details-image" src="./assets/events-1.png" alt="" loading="lazy">
+        <a href="https://central-school.com/events-gallery/"><p className="leading-[1.32]">read more</p></a>
+        <h2>Loy Krathong</h2>
+        <p>November 11</p>
+        <p>CIS Campus</p>
+        <p>10:00 - 11:30</p>
+        <h2>Class Demo</h2>
+        <p>November 16</p>
+        <p>CIS Campus</p>
+        <p>10:00 - 11:30</p>
+        <img class="details-image" src="./assets/events-2.png" alt="" loading="lazy">
+  </template>
+
+  <template id="detail-curriculum" data-title="U.S. California Curriculum">
+    <h2>Our Academics</h2>
+        <p>Our curriculum is rooted in the principles of California (K-12) and supported by our school’s research-based curriculum on how children learn through play-based activities, exploration, and Learning tasks and activities that are designed for learners to reflect and respond to ideas and information.</p>
+        <p>All classes are designed to help spark each child’s joy of learning that’s sure to grow with each academic year. We strive to become a model of excellence in education, where students flourish academically and become visionary who embrace cultural diversity, social responsibility and ethical leadership.</p>
+        <img class="details-image" src="./assets/curriculum-1.png" alt="" loading="lazy">
+        <ul class="stat-list"><li><strong>English Speaking Skill<br>(Non-Native Speakers)</strong><p>99%</p></li><li><strong>Chinese Speaking Skill<br>(Non-Native Speakers)</strong><p>85%</p></li><li><strong>Thai Speaking Skill<br>(Non-Native Speakers)</strong><p>90%</p></li></ul>
+        <h2>ACADEMIC</h2>
+        <ul class="detail-list"><li><a href="https://central-school.com/mother-and-baby-club/"><p className="leading-[1.32]">Mother and Baby Club</p></a></li><li><a href="https://central-school.com/nursery/"><p className="leading-[1.32]">Nursery</p></a></li><li><a href="https://central-school.com/kindergarten/"><p className="leading-[1.32]">Kindergarten</p></a></li><li><a href="https://central-school.com/elementary/"><p className="leading-[1.32]">Elementary</p></a></li></ul>
+        <img class="details-image" src="./assets/curriculum-2.png" alt="" loading="lazy">
+    <p>interested in joining us ?</p>
+    <h2>Join Us For Information About New Student Admissions</h2>
+    <p>Unmatched academic standards, diverse extracurricular activities, and experienced teachers await. Experience a well-rounded education that will shape your child’s future.</p>
+  </template>
+
+  <template id="detail-news" data-title="The Dragon News">
+    <p>Your Weekly CIS Update</p>
+        <h2>Songrkran 2025</h2>
+        <p>Experience the joy and culture of Songkran Celebration 2025 at Central International School! Our students and teachers came together for a fun-filled day of water play, traditional activities, and unity. Watch as our student reporters capture the highlights and share the spirit of Thai New Year. Celebrate tradition, community, and student voices in this special Dragon News Report!</p>
+        <h2>CHINESE NEW YEAR 2024</h2>
+        <p>Central International School welcomed the Year of the Dragon with a vibrant Chinese New Year 2024 celebration! The event was filled with traditional performances, colorful outfits, and festive activities led by our students. Our student reporters captured the energy, culture, and joy shared throughout the campus. Don’t miss this Dragon News Report!</p>
+        <h2>ASA and aha classes</h2>
+        <p>Learning doesn’t stop when the bell rings at Central International School! Our After School and After Hour Classes offer students extra opportunities to grow through engaging activities, skill-building sessions, and academic support. Watch as our student reporters give you a glimpse into the fun and learning that happens beyond regular class hours!</p>
+        <div class="video-grid"><a class="video-preview" href="https://youtu.be/0o7pYHxzWLY?si=ZCEwqtW-ScSrhYPa" aria-label="Songrkran 2025"><img src="./assets/news-1.png" alt="" loading="lazy"></a>
+    <a class="video-preview" href="https://youtu.be/5zOeJiG3NfY?si=9yj2fJyGYhhVLh1R" aria-label="CHINESE NEW YEAR 2024"><img src="./assets/news-2.png" alt="" loading="lazy"></a>
+    <a class="video-preview" href="https://youtu.be/gjQ4Oil_Htw?si=K69A12TaeZDLJwaG" aria-label="ASA and aha classes"><img src="./assets/news-3.png" alt="" loading="lazy"></a></div>
+        <p>Stay updated with our latest news, events, and important announcements</p>
+        <h2>Latest Updates</h2>
+        <h3>Class demo 2025</h3>
+        <img class="details-image" src="./assets/class-demo.png" alt="" loading="lazy">
+        <p>Last Saturday, 26th April 2025, our Kindergarten students confidently showcased their remarkable academic progress during the Class Demo! From impressive reading, writing, and math skills to lively presentations, our young learners truly amazed everyone with how far they have come. It was a proud and joyful moment for parents and teachers alike — a true celebration of hard work, growth, and early excellence!</p>
+        <a href="https://central-school.com/class-demo-2025/">See More</a>
+        <h3>Brain olympics 2025</h3>
+        <img class="details-image" src="./assets/brain-olympics.png" alt="" loading="lazy">
+        <p>Last April 25, Central International School’s elementary students showed just how brilliant young minds can be! From cracking logic questions in Mindmaster, solving tough equations in Mathletes Arena, commanding the stage in Public Speaking, to shining bright in the Talent Show, our students wowed us all!</p>
+        <p>It was a thrilling academic showdown filled with creativity, confidence, and critical thinking.</p>
+        <a href="https://central-school.com/brain-olympics-2025/">See More</a>
+        <h3>Songkran Celebration</h3>
+        <img class="details-image" src="./assets/songkran.png" alt="" loading="lazy">
+        <p>Pure water-filled excitement at Central International School’s Songkran 2025!</p>
+        <p>We started the day with an epic parade, vibrant Thai cultural dance, and a heartwarming water blessing ceremony from teachers to students. Then, the fun really began!</p>
+        <p>The school grounds were a splash zone of laughter, water fights, and nonstop fun! Kids and parents went wild in the pools, getting soaked and making memories. It was a colorful, unforgettable day of water wars and joy!</p>
+        <a href="https://central-school.com/songkran-2025/">See More</a>
+        <a class="video-preview" href="https://youtube.com/shorts/GI0WzzHE_xM?feature=share" aria-label="YouTube — Latest Updates"><img src="./assets/news-4.png" alt="" loading="lazy"></a>
+  </template>
+</body>
+</html>
+
