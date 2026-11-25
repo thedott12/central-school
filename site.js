@@ -147,3 +147,22 @@ picker.addEventListener("keydown", event => {
     languageTrigger.focus();
   }
 });
+
+// Content is visible by default, including when scripting or motion is disabled.
+if ("IntersectionObserver" in window) {
+  const motionPreference = matchMedia("(prefers-reduced-motion: no-preference)");
+  const arrivals = new IntersectionObserver(entries => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      if (motionPreference.matches) entry.target.classList.add("scroll-arrival");
+      arrivals.unobserve(entry.target);
+    }
+  }, { threshold: 0.08 });
+  const targets = document.querySelectorAll(
+    "main .section h2, .programme-list > li, .benefit-list > li, .news-list > li, .topic-list > li, main .tour, .site-footer"
+  );
+  for (const target of targets) arrivals.observe(target);
+  document.addEventListener("animationend", event => {
+    if (event.animationName === "section-arrival") event.target.classList.remove("scroll-arrival");
+  });
+}

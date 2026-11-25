@@ -284,11 +284,11 @@ h1, h2, h3, .programme-title, .news-title {
 .news h2 { font-size: 45px; }
 .news-list { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-block: 18px 14px; }
 .news-link { display: grid; gap: 12px; border-radius: 20px; }
-.news-visual { display: block; block-size: 151px; border-radius: 20px; overflow: clip; }
+.news-visual { display: block; aspect-ratio: 1.9; border-radius: 20px; overflow: clip; }
 .news-image { inline-size: 100%; block-size: 100%; object-fit: cover; object-position: 50% var(--news-focus); }
-.class-demo { --news-focus: 36%; }
-.brain-olympics { --news-focus: 36%; }
-.songkran { --news-focus: 38%; }
+.class-demo { --news-focus: 26%; }
+.brain-olympics { --news-focus: 26%; }
+.songkran { --news-focus: 26%; }
 .news-caption { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
 .news-title { font-size: 25px; }
 .news-more { display: none; }
@@ -452,7 +452,7 @@ h1, h2, h3, .programme-title, .news-title {
   .news-list { grid-template-columns: 1fr; gap: 15px; margin-block: 18px 16px; }
   .news-link { display: grid; grid-template-columns: 86px minmax(0, 1fr); align-items: center; gap: 13px; border-radius: 14px; }
   .news-visual { block-size: auto; aspect-ratio: 86 / 76; border-radius: 14px; }
-  .news-image { object-position: center bottom; transform: scale(1.18); transform-origin: center bottom; }
+  .news-image { object-position: center; }
   .news-caption { display: grid; gap: 7px; }
   .news-caption img { display: none; }
   .news-title { font-size: 21px; }
@@ -526,4 +526,64 @@ html:not(:lang(en)) :is(h1, h2, h3, .programme-title, .news-title, .benefit) {
   line-height: 1.22;
   letter-spacing: normal;
   overflow-wrap: anywhere;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root { --ease-settle: cubic-bezier(.22, 1, .36, 1); }
+
+  @keyframes hero-arrival {
+    from { opacity: .65; translate: 0 8px; }
+    to { opacity: 1; translate: 0 0; }
+  }
+  .hero-content { animation: hero-arrival 420ms var(--ease-settle); }
+  .hero-media { animation: hero-arrival 560ms var(--ease-settle); }
+
+  .language-trigger::after { transition: transform 180ms var(--ease-settle); }
+  .language-picker[open] .language-options,
+  .details-dialog[open] {
+    transition: opacity 180ms ease-out, translate 220ms var(--ease-settle);
+  }
+  @starting-style {
+    .language-picker[open] .language-options { opacity: 0; translate: 0 -4px; }
+    .details-dialog[open] { opacity: 0; translate: 0 9px; }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .programme-card, .news-link, .pill > img:last-child {
+      transition: translate 200ms var(--ease-settle);
+    }
+    .programme-card:hover, .news-link:hover { translate: 0 -3px; }
+    .pill:hover > img:last-child { translate: 3px 0; }
+  }
+}
+
+/* A static paper pattern is also the fallback for reduced motion. */
+body {
+  isolation: isolate;
+  background-image: url("./assets/school-pattern.svg?v=2");
+}
+@media screen and (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: scroll(root block)) {
+    body { background-image: none; }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0 0 -80px;
+      z-index: -1;
+      pointer-events: none;
+      background-image: url("./assets/school-pattern.svg?v=2");
+      animation: paper-drift linear both;
+      animation-timeline: scroll(root block);
+    }
+    @keyframes paper-drift { to { transform: translateY(-80px); } }
+  }
+  @keyframes section-arrival {
+    from { opacity: .2; translate: 0 12px; }
+    to { opacity: 1; translate: 0 0; }
+  }
+  .scroll-arrival { animation: section-arrival 460ms var(--ease-settle) backwards; }
+  li.scroll-arrival:nth-child(2) { animation-delay: 40ms; }
+  li.scroll-arrival:nth-child(3) { animation-delay: 75ms; }
+  li.scroll-arrival:nth-child(4) { animation-delay: 100ms; }
+  .scroll-arrival:focus-within { animation: none; }
 }
